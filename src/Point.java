@@ -1,30 +1,14 @@
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter //generates all getter methods for all non-public fields
+@Setter //generates all setter methods for all non-public fields
+@NoArgsConstructor //generates a constructor without parameters
+@AllArgsConstructor
 public class Point {
     private double x;
     private double y;
 
-    public Point() {
-        this.x=0.0;
-        this.y=0.0;
-    }
-
-    public Point(double x, double y) {
-        this.x = x;
-        this.y = y;
-    }
-
-    public double getX() {
-        return x;
-    }
-
-    public void setX(double x) {
-        this.x = x;
-    }
-
-    public double getY() {
-        return y;
-    }
-
-    public void setY(double y) {
-        this.y = y;
-    }
 }
