@@ -1,3 +1,10 @@
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+@Setter
+@ToString
 public class Disk {
     //id is immutable field
     private final int id;
@@ -9,7 +16,7 @@ public class Disk {
 
 
     public Disk() {
-        this(new Point(),0.0);
+        this(new Point(0.0,0.0),0.0);
     }
 
     public Disk(Point center, double radius) {
@@ -21,19 +28,4 @@ public class Disk {
         this.radius = radius;
     }
 
-    public Point getCenter() {
-        return center;
-    }
-
-    public void setCenter(Point center) {
-        this.center = center;
-    }
-
-    public double getRadius() {
-        return radius;
-    }
-
-    public void setRadius(double radius) {
-        this.radius = radius;
-    }
 }

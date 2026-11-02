@@ -1,30 +1,18 @@
+import lombok.*;
+
+@Getter
+@Setter
+//@NoArgsConstructor
+@RequiredArgsConstructor //generates a constructor with
+// required fields values as parameters (x and y in our case)
+@AllArgsConstructor
+@ToString
 public class Point {
+    @NonNull // x is required
     private double x;
+    @NonNull //y is required
     private double y;
+    private double z;
 
-    public Point() {
-        this.x=0.0;
-        this.y=0.0;
-    }
 
-    public Point(double x, double y) {
-        this.x = x;
-        this.y = y;
-    }
-
-    public double getX() {
-        return x;
-    }
-
-    public void setX(double x) {
-        this.x = x;
-    }
-
-    public double getY() {
-        return y;
-    }
-
-    public void setY(double y) {
-        this.y = y;
-    }
 }
