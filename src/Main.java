@@ -4,6 +4,9 @@ void main(){
 Disk d1=new Disk();
     Point p1=new Point(6.9,2.1,7.3);
     IO.println(p1);
+    Point p2=new Point(6.9,2.1,7.3);
+    IO.println(p2);
+    IO.println("p1 and p2 are equal ? "+p1.equals(p2));
     Scanner sc= new Scanner(System.in);
     IO.println("Enter thed center coordinates :");
     IO.println("x = ");
