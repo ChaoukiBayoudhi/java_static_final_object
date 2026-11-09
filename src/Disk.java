@@ -22,7 +22,7 @@ public class Disk {
 
 
     public Disk() {
-        this(new Point(0.0,0.0),0.0);
+        this(Point.of(0.0,0.0),0.0);
     }
 
     public Disk(Point center, double radius) {

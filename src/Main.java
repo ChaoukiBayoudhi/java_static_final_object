@@ -2,9 +2,9 @@ void main(){
 //1- create an instance (d1) of Disk (x, y and radius
     // are inputs from the keyboard)
 Disk d1=new Disk();
-    Point p1=new Point(6.9,2.1,7.3);
+    Point p1=Point.of(6.9,2.1,7.3);
     IO.println(p1);
-    Point p2=new Point(6.9,2.1,7.3);
+    Point p2=Point.of(6.9,2.1,7.3);
     IO.println(p2);
     IO.println("p1 and p2 are equal ? "+p1.equals(p2));
     Scanner sc= new Scanner(System.in);
@@ -13,7 +13,7 @@ Disk d1=new Disk();
     double x=sc.nextDouble();
     IO.println("y = ");
     double y=sc.nextDouble();
-    Point point=new Point(x,y);
+    Point point=Point.of(x,y);
     d1.setCenter(point);
     IO.println("Rayon = ");
     //double r=sc.nextDouble();
@@ -26,7 +26,7 @@ Disk d1=new Disk();
     IO.println(d1);
     IO.println(d1.toString());
     //3- create a second instance (d2)
-    Disk d2=new Disk(new Point(3.8,7.2),18.7);
+    Disk d2=new Disk(Point.of(3.8,7.2),18.7);
     IO.println("The disk 2 is :");
     IO.println(d2);
     //4- compare the 2 instances using ==

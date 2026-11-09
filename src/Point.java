@@ -2,12 +2,17 @@ import lombok.*;
 
 import java.util.Objects;
 
-@Getter
-@Setter
+@Data //replaces the 5 Lombok's annotations:
+//@Getter, @Setter, @RequiredArgsConstructor, @ToString and @EqualsAndHashCode
+//@Getter
+//@Setter
 //@NoArgsConstructor
-@RequiredArgsConstructor //generates a constructor with
+//@RequiredArgsConstructor //generates a constructor with
+@RequiredArgsConstructor(staticName = "of")
+//provide the possibility to create an instance using of
+//like this Point p1=Point.of(5.2, 6.1)
 // required fields values as parameters (x and y in our case)
-@AllArgsConstructor
+@AllArgsConstructor(staticName = "of")
 //@ToString //returns all fields values as String (x, y and z values)
 //@ToString(of={"x", "y"}) //returns only x and y values
 @ToString(exclude = "z") //returns only x and y values
