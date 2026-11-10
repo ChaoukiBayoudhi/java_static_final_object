@@ -1,8 +1,32 @@
 void main(){
+//create a Point using @Accessors(fluent=true, chain=True)
+    /*Point point22=new Point()
+            .x(3.2)
+            .y(4.7)
+            .z(22.1);*/
+
+    //Create an instance of Disk using @Builder of Lombok
+    /*Disk disk1=Disk.builder()
+            .radius(10.5)
+            .center(Point.of(33.2,7.8))
+            .build();
+    IO.println(disk1);*/
+
+    Point point12=Point.builder()
+            .z(2.3)
+            .x(3.1)
+            .y(4.2)
+            .build();
+    IO.println("Point: " + point12);
+
 //1- create an instance (d1) of Disk (x, y and radius
     // are inputs from the keyboard)
-Disk d1=new Disk();
+
+    Disk d1=new Disk();
     Point p1=Point.of(6.9,2.1,7.3);
+    //update x and y values
+    p1.x(8.3);
+    p1.y(8.3);
     IO.println(p1);
     Point p2=Point.of(6.9,2.1,7.3);
     IO.println(p2);

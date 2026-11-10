@@ -1,8 +1,6 @@
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
+//@Builder //using this annotation we can create instance of Disk as a chain
 @Getter
 @Setter
 @ToString
@@ -11,6 +9,7 @@ import lombok.ToString;
 //compare Disk objects using the included fields or methods
 //(the comparison is made using only the fields or methods
 //annotated with @EqualsAndHashCode.Include)
+//@AllArgsConstructor
 public class Disk {
     //id is immutable field
     private final int id;

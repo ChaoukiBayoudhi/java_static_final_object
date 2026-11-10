@@ -1,6 +1,10 @@
 import lombok.*;
+import lombok.experimental.Accessors;
+import lombok.experimental.FieldDefaults;
 
+import java.lang.reflect.AccessFlag;
 import java.util.Objects;
+@Builder
 
 @Data //replaces the 5 Lombok's annotations:
 //@Getter, @Setter, @RequiredArgsConstructor, @ToString and @EqualsAndHashCode
@@ -18,12 +22,17 @@ import java.util.Objects;
 @ToString(exclude = "z") //returns only x and y values
 //@EqualsAndHashCode //2 points are equal if they have the same coordinates values(x,y and z)
 @EqualsAndHashCode(of={"x","y"}) // compares Points using x and y only
+@FieldDefaults(level=AccessLevel.PRIVATE)
+//all fields are declared private without need to specify it explicitly
+//@FieldDefaults(level = AccessLevel.PROTECTED,makeFinal = true)
+//all fields are protected by default and are final
+@Accessors(fluent = true, chain=true)
 public class Point {
     @NonNull // x is required
-    private double x;
+     double x;
     @NonNull //y is required
-    private double y;
-    private double z;
+     double y;
+     double z;
 
 
 }
